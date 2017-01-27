@@ -1,8 +1,12 @@
 " load plugins
+
+source ~/.vim/autoload/pathogen.vim
+set nocp
+set nocompatible
 execute pathogen#infect()
+call pathogen#infect('bundle/*')
 call pathogen#helptags()
 
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 filetype plugin indent on    " required
@@ -174,7 +178,7 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-colorscheme solarized
+colorscheme desert
 set guifont=Inconsolata:h15
 set guioptions-=L
 
@@ -333,7 +337,7 @@ au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 " Go settings
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
-autocmd BufEnter *.go colorscheme nofrils-dark
+autocmd BufEnter *.go colorscheme desert
 
 " scala settings
 autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
